@@ -320,17 +320,13 @@
 
   function abrirWhatsApp(nome, renda, rendaFutura, patrimonio, ddd, tel) {
     var msg = encodeURIComponent(
-      "Olá! Me chamo *" + nome + "* e acabei de usar a calculadora do Viva Método.\n\n" +
-      "💰 Renda atual: " + fmt(renda) + "\n" +
-      "🎯 Renda futura desejada: " + fmt(rendaFutura) + "\n" +
-      "🏦 Patrimônio necessário: " + fmt(patrimonio) + "\n\n" +
-      "Quero receber o e-book gratuito e entender como chegar lá!"
+      "Olá! Me chamo *" + nome + "* e gostaria de receber o e-book gratuito do Viva Método!"
     );
     window.open("https://wa.me/" + WHATSAPP_MENTOR + "?text=" + msg, "_blank");
     document.getElementById("modalConteudo").style.display = "none";
     document.getElementById("sucesso").classList.add("visivel");
   }
-
+  
   document.getElementById("btnCalcular").addEventListener("click", calcular);
   document.getElementById("btnEbook").addEventListener("click", abrirModal);
   document.getElementById("btnFechar").addEventListener("click", fecharModal);
